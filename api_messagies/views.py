@@ -4,11 +4,9 @@ from rest_framework.response import Response
 from rest_framework.generics import CreateAPIView
 from rest_framework import status
 from allauth.account.utils import complete_signup
-from allauth.account import app_settings as allauth_settings
 from rest_auth.models import TokenModel
 from rest_auth.views import LoginView
 from rest_auth.registration.app_settings import RegisterSerializer, register_permission_classes
-from django.contrib.auth.models import User
 
 sensitive_post_parameters_m = method_decorator(
     sensitive_post_parameters('password1', 'password2')
